@@ -52,3 +52,16 @@ const rules = {
     lizard: ["paper", "spock"],         //Lizard beats paper and spock
     spock: ["scissors", "rock"],        //Spock beats scissors and rock
 };
+
+// How-to-play dropdown logic
+// Toggle visibility of instructions on mobile/tablet
+// Update arrow icon to reflect opened/closed state
+
+howToToggle.addEventListener("click", () => {
+    const isHidden = howToContent.hidden;   // Check current visibility
+
+    howToContent.hidden = !isHidden;        // Toggle hidden attribute
+
+    // Update button text to show ▲ or ▼
+    howToToggle.textContent = isHidden ? "How to Play ▲" : "How to Play ▼";
+});
