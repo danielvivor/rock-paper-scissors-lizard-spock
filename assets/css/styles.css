@@ -251,3 +251,9 @@ button:active {
     z-index: 100;
     /* Above banner */
 }
+
+/* Game over banner animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -48%); } /* Slightly above */
+    to   { opacity: 1; transform: translate(-50%, -50%); } /* Centered */
+}
