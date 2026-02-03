@@ -140,3 +140,11 @@ label {
     margin-bottom: var(--spacing-sm);
     font-weight: 600;
 }
+
+/* dropdown selects */
+select {
+    width: auto;
+    padding: var(--spacing-xs);
+    border-radius: var(--radius);
+    border: 2px solid var(--color-border);
+}
