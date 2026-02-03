@@ -41,3 +41,14 @@ const bannerClose = document.getElementById("game-over-close");
 
 const howToToggle = document.getElementById("how-to-toggle");
 const howToContent = document.getElementById("how-to-content");
+
+
+// Define game rules
+
+const rules = {
+    rock: ["scissors", "lizard"],       //Rock beats scissors and lizard
+    paper: ["rock", "spock"],           //Paper beats rock and spock
+    scissors: ["paper", "spock"],       //Scissors beats paper and lizard
+    lizard: ["paper", "spock"],         //Lizard beats paper and spock
+    spock: ["scissors", "rock"],        //Spock beats scissors and rock
+};
