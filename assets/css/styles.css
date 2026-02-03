@@ -83,6 +83,13 @@ body {
     letter-spacing: var(--spacing-letter);
 }
 
+/* Header subtitle */
+.site-subtitle {
+font-style: italic;
+font-weight: 600;
+font-size: var(--spacing-md);
+}
+
 /* main styles */
 .site-main {
     flex: 1;
