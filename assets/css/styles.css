@@ -1,0 +1,9 @@
+
+/* Apply reset to every elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
