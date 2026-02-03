@@ -15,5 +15,25 @@ html {
 
 /* CSS Variables */
 :root {
-    
+    --font-primary: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* Modern, clean, cross-platform font stack */
+
+    --color-bg: #fAf9f6;          /* Soft off-white background for readability */
+    --color-text: #222222;           /* Dark gray text for high contrast */
+    --color-panel: #ffffff;          /* White panels for card-like sections */
+    --color-border: #e0e0e0;      /* Light border for subtle separation */
+
+    --color-accent: #4a90e2;      /* Main accent color (buttons, highlights) */
+    --color-accent-dark: #2f6bb2; /* Darker shade for hover states */
+
+    --color-win: #4caf50;         /* Green border for win banner */
+    --color-loss: #d0021b;        /* Red border for loss banner */
+    --color-draw: #4a90e2;        /* Blue border for draw banner */
+
+    --radius: 8px;                /* Consistent border radius across UI */
+
+    --spacing-xs: 0.5rem;         /* Extra small spacing */
+    --spacing-sm: 1rem;           /* Small spacing */
+    --spacing-md: 1.5rem;         /* Medium spacing */
+    --spacing-lg: 2rem;           /* Large spacing */
+    --spacing-xl: 2.5rem;         /* Extra large spacing */
 }
