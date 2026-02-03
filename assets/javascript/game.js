@@ -295,3 +295,29 @@ function playRound(playerMove) {
         showGameOverBanner();
     }
 }
+
+// Events listeners
+// Connect UI interactions to game logic
+
+// Start/reset game when clicking the Start button
+startBtn.addEventListener("click", startGame);
+
+// Player chooses a move
+choiceButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        playRound(btn.dataset.move);        // Pass move from data attribute
+    });
+});
+
+// Restart game from banner
+bannerRestart.addEventListener("click", () => {
+    stopConfetti();     // Stop celebration
+    banner.hidden = true;
+    startGame();        // Start new game
+});
+
+// Close banner without restarting
+bannerClose.addEventListener("click", () => {
+    stopConfetti();     // Stop celebration
+    banner.hidden = true;
+});
