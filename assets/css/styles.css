@@ -161,3 +161,13 @@ button {
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
+
+button:hover {
+    background-color: var(--color-accent-dark);
+    /* Darker on hover */
+}
+
+button:active {
+    transform: scale(0.97);
+    /* Slight shrink on click */
+}
