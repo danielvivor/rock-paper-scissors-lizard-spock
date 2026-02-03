@@ -190,3 +190,21 @@ function launchConfetti() {
 
     draw(); // Start animation loop
 }
+
+// Stop confetti
+// Stop animation loop
+// Clear canvas
+
+function stopConfetti() {
+    confettiActive = false; // Stop animation loop
+
+    const canvas = document.getElementById("confetti-canvas");
+    const ctx = canvas.getContext("2d");
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear screen
+
+    if (confettiAnimationId) {
+        cancelAnimationFrame(confettiAnimationId);    // Cancel animation frame
+        confettiAnimationId = null;                   // Reset ID
+    }
+}
