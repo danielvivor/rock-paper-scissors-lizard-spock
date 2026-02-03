@@ -105,6 +105,11 @@ font-size: var(--spacing-md);
     border: 2px solid var(--color-border);
 }
 
+/* Footer links */
+a {
+    text-decoration: none;
+}
+
 /* Panels */
 .panel {
     background-color: var(--color-panel);
