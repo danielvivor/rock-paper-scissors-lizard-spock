@@ -110,3 +110,83 @@ function determineWinner(player, computer) {
 
     return "computer";      // Otherwise computer wins
 }
+
+// UI update helpers
+
+function updateScoreboard() {
+    scoreCard.textContent = `Your score: ${state.playerScore} | Computer score: ${state.computerScore}`;
+}
+
+function updateRoundsInfo() {
+    roundsInfo.textContent = `Rounds remaining: ${state.roundsRemaining}`;
+}
+
+function updatePatternInfo() {
+    patternInfo.textContent = `Pattern mode: ${state.patternMode ? "on" : "off"}`;
+}
+
+function resetRoundDisplay() {
+    playerChoiceEl.textContent = "—";      // Reset player choice display
+    computerChoiceEl.textContent = "—";    // Reset computer choice display
+    outcomeEl.textContent = "—";           // Reset outcome display
+}
+
+// Confetti animation
+
+function launchConfetti() {
+    const canvas = document.getElementById("confetti-canvas");
+    const ctx = canvas.getContext("2d");
+
+    // Match canvas to full screen
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    confettiActive = true; // Mark animation as active
+
+    const confetti = [];   // Array to store confetti particles
+    const colors = ["#4A90E2", "#50E3C2", "#F5A623", "#D0021B", "#9013FE"]; // Color palette
+
+    // Create 150 confetti particles
+    for (let i = 0; i < 150; i++) {
+        confetti.push({
+            x: Math.random() * canvas.width,                 // Random horizontal position
+            y: Math.random() * canvas.height - canvas.height,   // Start above screen
+            r: Math.random() * 6 + 4,                        // Size of particle
+            d: Math.random() * 0.5 + 0.5,                    // Fall speed
+            color: colors[Math.floor(Math.random() * colors.length)], // Random color
+            tilt: Math.random() * 10 - 10                    // Tilt angle
+        });
+    }
+
+    // Update particle positions
+    function update() {
+        confetti.forEach((p) => {
+            p.y += p.d * 4;                  // Move downward
+            p.x += Math.sin(p.y * 0.02);     // Slight horizontal sway
+            p.tilt += 0.1;                   // Rotate particle
+
+            // Reset particle when it falls off screen
+            if (p.y > canvas.height) {
+                p.y = -10;                   // Move back above screen
+                p.x = Math.random() * canvas.width;
+            }
+        });
+    }
+
+    // Draw particles each frame
+    function draw() {
+        if (!confettiActive) return;         // Stop animation if flag is false
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas
+
+        confetti.forEach((p) => {
+            ctx.fillStyle = p.color;         // Set particle color
+            ctx.fillRect(p.x, p.y, p.r, p.r * 2);   // Draw rectangle particle
+        });
+
+        update();                            // Update positions
+        confettiAnimationId = requestAnimationFrame(draw); // Loop animation
+    }
+
+    draw(); // Start animation loop
+}
