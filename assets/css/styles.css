@@ -78,3 +78,9 @@ body {
     border-bottom: 2px solid var(--color-border);
     letter-spacing: var(--spacing-letter);
 }
+
+/* main styles */
+.site-main {
+    flex: 1;
+    margin: var(--spacing-sm) auto;
+}
