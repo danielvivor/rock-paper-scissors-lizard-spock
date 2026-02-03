@@ -171,3 +171,12 @@ button:active {
     transform: scale(0.97);
     /* Slight shrink on click */
 }
+
+/* Choice buttons */
+.choice-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-xs);
+}
+
