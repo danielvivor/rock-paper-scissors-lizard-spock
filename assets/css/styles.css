@@ -50,15 +50,17 @@ body {
     --spacing-letter: 1.5px;
 
     --spacing-xs: 0.5rem;
-    /* Extra small spacing */
+    /* 5px */
     --spacing-sm: 1rem;
-    /* Small spacing */
+    /* 10px */
     --spacing-md: 1.5rem;
-    /* Medium spacing */
+    /* 15px */
     --spacing-lg: 2rem;
-    /* Large spacing */
+    /* 20px */
     --spacing-xl: 2.5rem;
-    /* Extra large spacing */
+    /* 25px */
+    --spacing-xxl: 3rem;
+    /* 30px */
 }
 /* Generic body styles */
 body {
@@ -102,5 +104,11 @@ body {
     padding: var(--spacing-sm);
     margin-bottom: var(--spacing-md);
     box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Panel titles */
+.panel-title {
+    font-size: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
 }
 
