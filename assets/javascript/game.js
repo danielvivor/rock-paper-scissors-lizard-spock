@@ -235,3 +235,27 @@ function showGameOverBanner() {
     bannerMessage.textContent = finalMessage; // Update banner text
     banner.hidden = false;                    // Show banner
 }
+
+
+// Start game
+// Reset all game values
+// Prepare UI for a new game
+
+function startGame() {
+    state.playerScore = 0;                          // Reset player score
+    state.computerScore = 0;                        // Reset computer score
+    state.roundsRemaining = Number(roundsSelect.value);     // Read selected rounds
+    state.difficulty = difficultySelect.value;      // Read selected difficulty
+    state.patternMode = state.difficulty !== "Easy"; // Enable prediction except in Easy
+    state.lastPlayerMove = null;                    // Reset prediction memory
+
+    updateScoreboard();                             // Update UI
+    updateRoundsInfo();
+    updatePatternInfo();
+    resetRoundDisplay();
+
+    banner.hidden = true;                           // Hide game-over banner
+    stopConfetti();                                 // Stop any leftover confetti
+
+    startBtn.textContent = "Reset Game";            // Change button label
+}
