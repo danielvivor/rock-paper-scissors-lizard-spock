@@ -7,3 +7,13 @@
     margin: 0;
     padding: 0;
 }
+
+/* Recallibrate default browser font sizing */
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+/* CSS Variables */
+:root {
+    
+}
