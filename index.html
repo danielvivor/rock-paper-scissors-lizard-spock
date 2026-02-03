@@ -41,6 +41,8 @@
     </header>
 
     <main class="site-main">
+
+        <!-- how to play -->
         <section class="how-to-play">
             <button id="how-to-toggle" class="dropdown-toggle" type="button">
                 How to Play ▼
@@ -55,6 +57,33 @@
                     <li><strong>SPOCK</strong> smashes Scissors and vaporizes Rock.</li>
                 </ul>
             </div>
+        </section>
+
+        <section class="panel">
+            <h2 class="panel-title">Game Controls</h2>
+
+            <!-- Difficulty level selector -->
+            <div class="form-group">
+                <label for="difficulty-select"><strong>Difficulty</strong></label>
+                <select id="difficulty-select">
+                    <option value="Easy">Easy (Random computer moves)</option>
+                    <option value="Medium">Medium (Occasional pattern use)</option>
+                    <option value="Hard">Hard (Computer predicts you)</option>
+                </select>
+            </div>
+
+            <!-- Rounds selector -->
+            <div class="form-group">
+                <label for="rounds-select"><strong>Number of Rounds</strong></label>
+                <select id="rounds-select">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+
+            <!-- Start/reset button -->
+            <button id="start-btn" type="button">Start Game</button>
         </section>
     </main>
 
