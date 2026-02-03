@@ -133,3 +133,10 @@ body {
 .form-group {
     margin-bottom: var(--spacing-md);
 }
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+}
