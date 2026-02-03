@@ -124,3 +124,8 @@ body {
     font-size: var(--spacing-sm);
 }
 
+/* dropdown content */
+.dropdown-content {
+    margin-top: var(--spacing-sm);
+}
+
