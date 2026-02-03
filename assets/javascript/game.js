@@ -10,3 +10,34 @@ const state = {
     patternMode: false,         //Whether the computer uses prediction logic
     lastPlayerMove: null,       //Stores last move for prediction in Medium/Hard
 };
+
+// Confetti controls variables
+
+let confettiActive = false;         //Whetther confetti is currently running
+let confettiAnimationId = null;         //Stores requestAnimationFrame ID
+
+// DOM elements references
+// Connect JavaScript to HTML elements
+// Allows updating text/elements
+
+const difficultySelect = document.getElementById("difficulty-select");
+const roundsSelect = document.getElementById("rounds-select");
+const startBtn = document.getElementById("start-btn");
+
+const scoreCard = document.getElementById("score-card");
+const roundsInfo = document.getElementById("rounds-info");
+const patternInfo = document.getElementById("pattern-info");
+
+const playerChoiceEl = document.getElementById("player-choice");
+const computerChoiceEl = document.getElementById("computer-choice");
+const outcomeEl = document.getElementById("round-outcome");
+
+const choiceButtons = document.querySelectorAll("[data-move]");
+
+const banner = document.getElementById("game-over-banner");
+const bannerMessage = document.getElementById("game-over-message");
+const bannerRestart = document.getElementById("game-over-restart");
+const bannerClose = document.getElementById("game-over-close");
+
+const howToToggle = document.getElementById("how-to-toggle");
+const howToContent = document.getElementById("how-to-content");
