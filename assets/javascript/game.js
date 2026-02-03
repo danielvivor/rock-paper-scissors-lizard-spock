@@ -73,3 +73,15 @@ function getRandomMove() {
     const moves = Object.keys(rules);                 // ["rock","paper","scissors","lizard","spock"]
     return moves[Math.floor(Math.random() * moves.length)]; // Pick random index
 }
+
+// STEP 7: Predict Player move (Medium/Hard)
+// Computer tries to counter the player's last move.
+function predictPlayerMove() {
+    if (!state.lastPlayerMove) return getRandomMove(); // random
+
+    const counters = Object.entries(rules)
+        .filter(([move, beats]) => beats.includes(state.lastPlayerMove))
+        .map(([move]) => move);  // Find moves that beat the player's last move
+
+    return counters.length ? counters[0] : getRandomMove(); // If prediction fails, fall back to random
+}
