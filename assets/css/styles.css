@@ -47,6 +47,8 @@ body {
     --radius: 8px;
     /* Consistent border radius across UI */
 
+    --spacing-letter: 1.5px;
+
     --spacing-xs: 0.5rem;
     /* Extra small spacing */
     --spacing-sm: 1rem;
@@ -66,4 +68,13 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.5;
+}
+
+/* header styles */
+.site-header {
+    text-align: center;
+    padding: var(--spacing-md) var(--spacing-xs);
+    background-color: var(--color-panel);
+    border-bottom: 2px solid var(--color-border);
+    letter-spacing: var(--spacing-letter);
 }
