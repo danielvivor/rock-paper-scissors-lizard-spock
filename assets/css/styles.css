@@ -84,3 +84,12 @@ body {
     flex: 1;
     margin: var(--spacing-sm) auto;
 }
+
+/* footer */
+.site-footer {
+    text-align: center;
+    font-size: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: var(--color-panel);
+    border: 2px solid var(--color-border);
+}
