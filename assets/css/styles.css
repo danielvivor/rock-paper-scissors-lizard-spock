@@ -112,3 +112,15 @@ body {
     margin-bottom: var(--spacing-sm);
 }
 
+/* dropdown toggle */
+.dropdown-toggle {
+    width: 100%;
+    text-align: center;
+    letter-spacing: var(--spacing-letter);
+    background-color: var(--color-accent);
+    color: var(#ffffff);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius);
+    font-size: var(--spacing-sm);
+}
+
