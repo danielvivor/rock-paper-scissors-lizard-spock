@@ -99,3 +99,14 @@ function getComputerMove() {
 
     return predictPlayerMove();     // Hard mode always predicts
 }
+
+// Determine round winner
+
+function determineWinner(player, computer) {
+
+    if (player === computer) return "draw"; // Same move -> draw
+
+    if (rules[player].includes(computer)) return "player";    // If computer's move is in the list of moves the player beats
+
+    return "computer";      // Otherwise computer wins
+}
