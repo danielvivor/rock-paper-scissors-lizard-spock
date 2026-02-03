@@ -208,3 +208,30 @@ function stopConfetti() {
         confettiAnimationId = null;                   // Reset ID
     }
 }
+
+// Show game over banner
+// Display final result
+// Trigger confetti if player wins
+
+function showGameOverBanner() {
+    banner.classList.remove("win", "loss", "draw"); // Reset banner style
+
+    let finalMessage = ""; // Will hold final text
+
+    if (state.playerScore > state.computerScore) {
+        finalMessage = "Game Over — You Won!";
+        banner.classList.add("win"); // Green border
+        launchConfetti();            // Celebrate!
+    } 
+    else if (state.playerScore < state.computerScore) {
+        finalMessage = "Game Over — You Lost!";
+        banner.classList.add("loss"); // Red border
+    } 
+    else {
+        finalMessage = "Game Over — It's a Draw!";
+        banner.classList.add("draw"); // Blue border
+    }
+
+    bannerMessage.textContent = finalMessage; // Update banner text
+    banner.hidden = false;                    // Show banner
+}
