@@ -76,6 +76,7 @@ function getRandomMove() {
 
 // STEP 7: Predict Player move (Medium/Hard)
 // Computer tries to counter the player's last move.
+
 function predictPlayerMove() {
     if (!state.lastPlayerMove) return getRandomMove(); // random
 
@@ -84,4 +85,17 @@ function predictPlayerMove() {
         .map(([move]) => move);  // Find moves that beat the player's last move
 
     return counters.length ? counters[0] : getRandomMove(); // If prediction fails, fall back to random
+}
+
+// Computer move selection
+
+function getComputerMove() {
+    if (state.difficulty === "Easy") return getRandomMove();    // Always random
+
+    if (state.difficulty === "Medium") {
+        // 50% random, 50% predictive
+        return Math.random() < 0.5 ? getRandomMove() : predictPlayerMove();
+    }
+
+    return predictPlayerMove();     // Hard mode always predicts
 }
