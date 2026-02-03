@@ -180,3 +180,9 @@ button:active {
     margin-top: var(--spacing-xs);
 }
 
+/* Score card */
+#score-card {
+    font-size: var(--spacing-md);
+    color: var(--color-loss);
+}
+
