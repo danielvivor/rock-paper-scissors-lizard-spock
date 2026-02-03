@@ -65,3 +65,11 @@ howToToggle.addEventListener("click", () => {
     // Update button text to show ▲ or ▼
     howToToggle.textContent = isHidden ? "How to Play ▲" : "How to Play ▼";
 });
+
+// Random move generator
+// Used for EASY difficulty and fallback logic
+
+function getRandomMove() {
+    const moves = Object.keys(rules);                 // ["rock","paper","scissors","lizard","spock"]
+    return moves[Math.floor(Math.random() * moves.length)]; // Pick random index
+}
