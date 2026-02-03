@@ -259,3 +259,39 @@ function startGame() {
 
     startBtn.textContent = "Reset Game";            // Change button label
 }
+
+// Play a single round
+// Called when player clicks a move button.
+// Handles: computer move, winner calculation, score updates, UI updates, game-over check
+
+function playRound(playerMove) {
+    if (state.roundsRemaining <= 0) return; // Ignore clicks after game ends
+
+    const computerMove = getComputerMove(); // Get computer's move
+    const result = determineWinner(playerMove, computerMove); // Determine winner
+
+    state.lastPlayerMove = playerMove;      // Save for prediction logic
+    state.roundsRemaining--;                // Decrease rounds
+
+    // Update scores based on result
+    if (result === "player") state.playerScore++;
+    if (result === "computer") state.computerScore++;
+
+    // Update UI with choices and outcome
+    playerChoiceEl.textContent = playerMove;
+    computerChoiceEl.textContent = computerMove;
+    outcomeEl.textContent =
+        result === "draw"
+            ? "It's a draw!"
+            : result === "player"
+            ? "You win this round!"
+            : "Computer wins this round.";
+
+    updateScoreboard();                     // Refresh scoreboard
+    updateRoundsInfo();                     // Refresh rounds
+
+    // If no rounds left → show final banner
+    if (state.roundsRemaining === 0) {
+        showGameOverBanner();
+    }
+}
