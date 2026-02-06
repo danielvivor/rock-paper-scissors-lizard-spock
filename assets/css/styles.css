@@ -152,6 +152,13 @@ a {
     margin-top: var(--spacing-sm);
 }
 
+/* list */
+li {
+    list-style-type: none;
+    line-height: 2;
+    letter-spacing: var(--spacing-letter);
+}
+
 /* Forms */
 .form-group {
     margin-bottom: var(--spacing-md);
