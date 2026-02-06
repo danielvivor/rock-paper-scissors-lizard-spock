@@ -151,6 +151,10 @@ a {
 }
 
 /* list */
+.rules-list {
+    padding-bottom: var(--spacing-md);
+}
+
 li {
     list-style-type: none;
     line-height: 2;
@@ -302,5 +306,50 @@ button:active {
     html {
         font-size: 75%;
         /* 1rem = 12px */
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    html {
+        font-size: 75%;
+        /* 1rem = 12px */
+    }
+
+    /* Switch nav from burger to horizontal */
+    nav {
+        display: block;
+        width: fit-content;
+        position: relative;
+        box-shadow: none;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        gap: 2rem;
+    }
+
+    #cover-text h2 {
+        font-size: 2.5rem;
+    }
+
+    #cover-text p {
+        font-size: 1.8rem;
+    }
+
+    #landmarks h5 {
+        line-height: 38px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    html {
+        font-size: 87.5%;
+        /* 1rem = 14px */
     }
 }
