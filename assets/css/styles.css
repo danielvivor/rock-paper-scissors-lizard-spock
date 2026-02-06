@@ -27,7 +27,6 @@ body {
     /* Modern, clean, cross-platform font stack */
 
     /* Colors */
-    --color-header:#000000;
     /* black background color for header */
     --color-bg: #faf9f6;
     /* Soft off-white background for readability */
@@ -89,6 +88,8 @@ body {
     background-color: var(--color-panel);
     border-bottom: 2px solid var(--color-border);
     letter-spacing: var(--spacing-letter);
+    display: flex;
+    flex: wrap;
 }
 
 /* Header subtitle */
