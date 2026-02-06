@@ -315,15 +315,6 @@ button:active {
         font-size: 87.5%;
         /* 1rem = 14px */
     }
-
-    /* How to play */
-    #how-to-toggle {
-        display: none;
-    }
-
-    #how-to-content {
-        display: block !important;
-    }
 }
 
 /* Medium devices (screens 992px and up) */
