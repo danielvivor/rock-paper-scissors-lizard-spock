@@ -312,44 +312,16 @@ button:active {
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     html {
-        font-size: 75%;
-        /* 1rem = 12px */
+        font-size: 87.5%;
+        /* 1rem = 14px */
     }
 
-    /* Switch nav from burger to horizontal */
-    nav {
-        display: block;
-        width: fit-content;
-        position: relative;
-        box-shadow: none;
-    }
-
-    .nav-toggle-label {
+    /* How to play */
+    #how-to-toggle {
         display: none;
     }
 
-    #menu {
-        display: flex;
-        gap: 2rem;
-    }
-
-    #cover-text h2 {
-        font-size: 2.5rem;
-    }
-
-    #cover-text p {
-        font-size: 1.8rem;
-    }
-
-    #landmarks h5 {
-        line-height: 38px;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-    html {
-        font-size: 87.5%;
-        /* 1rem = 14px */
+    #how-to-content {
+        display: block !important;
     }
 }
