@@ -74,7 +74,7 @@ body {
 /* Generic body styles */
 body {
     font-family: var(--font-primary);
-    background-color: var(--color-bg);
+    background-color: var(--color-bg)
     color: var(--color-text);
     display: flex;
     flex-direction: column;
@@ -325,3 +325,22 @@ button:active {
         display: block !important;
     }
 }
+
+/* Medium devices (screens 992px and up) */
+@media (min-width: 992px) {
+    html {
+        font-size: 100%;
+        /* 1rem = 16px */
+    }
+}
+
+/* /* Extra large devices (large desktops, 1024px and up) */
+@media (min-width: 1024px) {
+    html {
+        font-size: 125%;
+        /* 1rem = 20px */
+    }
+}
+
+
+
