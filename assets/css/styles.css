@@ -18,12 +18,17 @@ body {
     height: 100%;
 }
 
+
 /* CSS Variables */
 :root {
+    /* Fonts */
     --font-primary:
         system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     /* Modern, clean, cross-platform font stack */
 
+    /* Colors */
+    --color-header:#000000;
+    /* black background color for header */
     --color-bg: #faf9f6;
     /* Soft off-white background for readability */
     --color-text: #222222;
@@ -45,6 +50,8 @@ body {
     --color-draw: #4a90e2;
     /* Blue border for draw banner */
 
+
+    /* Spacing & Sizing */
     --radius: 8px;
     /* Consistent border radius across UI */
 
@@ -63,6 +70,7 @@ body {
     --spacing-xxl: 3rem;
     /* 30px */
 }
+
 
 /* Generic body styles */
 body {
@@ -85,9 +93,9 @@ body {
 
 /* Header subtitle */
 .site-subtitle {
-font-style: italic;
-font-weight: 600;
-font-size: var(--spacing-md);
+    font-style: italic;
+    font-weight: 600;
+    font-size: var(--spacing-md);
 }
 
 /* main styles */
@@ -266,6 +274,16 @@ button:active {
 
 /* Game over banner animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translate(-50%, -48%); } /* Slightly above */
-    to   { opacity: 1; transform: translate(-50%, -50%); } /* Centered */
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+
+    /* Slightly above */
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Centered */
 }
