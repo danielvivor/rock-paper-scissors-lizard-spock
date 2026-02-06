@@ -88,8 +88,6 @@ body {
     background-color: var(--color-panel);
     border-bottom: 2px solid var(--color-border);
     letter-spacing: var(--spacing-letter);
-    display: flex;
-    flex: wrap;
 }
 
 /* Header subtitle */
@@ -294,4 +292,15 @@ button:active {
     }
 
     /* Centered */
+}
+
+/* Media Queries */
+/* Small devices (phones in landscape mode, 576px or larger) */
+@media (min-width: 576px) {
+
+    /* Recalibrate font sizing */
+    html {
+        font-size: 75%;
+        /* 1rem = 12px */
+    }
 }
